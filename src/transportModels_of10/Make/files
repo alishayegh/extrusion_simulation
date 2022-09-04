@@ -1,0 +1,4 @@
+viscosityModels/LevyMises/LevyMises.C
+viscosityModels/newLevyMises/newLevyMises.C
+
+LIB = $(FOAM_USER_LIBBIN)/libmyTransportModels

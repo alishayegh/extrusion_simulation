@@ -1,0 +1,22 @@
+OBJECTS = \
+$(OBJECTS_DIR)/viscoelasticModel.o\
+$(OBJECTS_DIR)/viscoelasticLaw.o\
+$(OBJECTS_DIR)/newViscoelasticLaw.o\
+$(OBJECTS_DIR)/LPTT.o\
+$(OBJECTS_DIR)/EPTT.o\
+$(OBJECTS_DIR)/Oldroyd_B.o\
+$(OBJECTS_DIR)/linearMaxwell.o\
+$(OBJECTS_DIR)/UCM.o\
+$(OBJECTS_DIR)/Giesekus.o\
+$(OBJECTS_DIR)/FENE_CR.o\
+$(OBJECTS_DIR)/FENE_P.o\
+$(OBJECTS_DIR)/XPP_SE.o\
+$(OBJECTS_DIR)/XPP_DE.o\
+$(OBJECTS_DIR)/DCPP.o\
+$(OBJECTS_DIR)/Feta_PTT.o\
+$(OBJECTS_DIR)/Leonov.o\
+$(OBJECTS_DIR)/WhiteMetznerLarson.o\
+$(OBJECTS_DIR)/WhiteMetznerCross.o\
+$(OBJECTS_DIR)/WhiteMetznerCarreauYasuda.o\
+$(OBJECTS_DIR)/S_MDCPP.o\
+$(OBJECTS_DIR)/multiMode.o
