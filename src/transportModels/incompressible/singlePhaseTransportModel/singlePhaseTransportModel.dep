@@ -1,7 +1,7 @@
 $(OBJECTS_DIR)/singlePhaseTransportModel.o: singlePhaseTransportModel/singlePhaseTransportModel.dep
 singlePhaseTransportModel/singlePhaseTransportModel.dep: singlePhaseTransportModel/singlePhaseTransportModel.C
 singlePhaseTransportModel/singlePhaseTransportModel.dep: singlePhaseTransportModel/singlePhaseTransportModel.H
-singlePhaseTransportModel/singlePhaseTransportModel.dep: ../incompressible/transportModel/transportModel.H
+singlePhaseTransportModel/singlePhaseTransportModel.dep: $(WM_PROJECT_DIR)/src/transportModels/incompressible/transportModel/transportModel.H
 singlePhaseTransportModel/singlePhaseTransportModel.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/IOdictionary.H
 singlePhaseTransportModel/singlePhaseTransportModel.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/dictionary.H
 singlePhaseTransportModel/singlePhaseTransportModel.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/entry.H
@@ -170,13 +170,6 @@ singlePhaseTransportModel/singlePhaseTransportModel.dep: $(WM_PROJECT_DIR)/src/f
 singlePhaseTransportModel/singlePhaseTransportModel.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/SymmTensor4thOrderTemplate.H
 singlePhaseTransportModel/singlePhaseTransportModel.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/SymmTensor4thOrderTemplateI.H
 singlePhaseTransportModel/singlePhaseTransportModel.dep: $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/surfaceFieldsFwd.H
-singlePhaseTransportModel/singlePhaseTransportModel.dep: lnInclude/viscosityModel.H
-singlePhaseTransportModel/singlePhaseTransportModel.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/dimensionedScalar.H
-singlePhaseTransportModel/singlePhaseTransportModel.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/dimensionedType.H
-singlePhaseTransportModel/singlePhaseTransportModel.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/dimensionSet.H
-singlePhaseTransportModel/singlePhaseTransportModel.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/dimensionedScalarFwd.H
-singlePhaseTransportModel/singlePhaseTransportModel.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/dimensionSets.H
-singlePhaseTransportModel/singlePhaseTransportModel.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/dimensionedType.C
 singlePhaseTransportModel/singlePhaseTransportModel.dep: $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/volFields.H
 singlePhaseTransportModel/singlePhaseTransportModel.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/objectRegistry.H
 singlePhaseTransportModel/singlePhaseTransportModel.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/wordReList.H
@@ -190,6 +183,12 @@ singlePhaseTransportModel/singlePhaseTransportModel.dep: $(WM_PROJECT_DIR)/src/f
 singlePhaseTransportModel/singlePhaseTransportModel.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/clock.H
 singlePhaseTransportModel/singlePhaseTransportModel.dep: $(WM_PROJECT_DIR)/src/OSspecific/POSIX/lnInclude/cpuTime.H
 singlePhaseTransportModel/singlePhaseTransportModel.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/TimeState.H
+singlePhaseTransportModel/singlePhaseTransportModel.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/dimensionedScalar.H
+singlePhaseTransportModel/singlePhaseTransportModel.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/dimensionedType.H
+singlePhaseTransportModel/singlePhaseTransportModel.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/dimensionSet.H
+singlePhaseTransportModel/singlePhaseTransportModel.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/dimensionedScalarFwd.H
+singlePhaseTransportModel/singlePhaseTransportModel.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/dimensionSets.H
+singlePhaseTransportModel/singlePhaseTransportModel.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/dimensionedType.C
 singlePhaseTransportModel/singlePhaseTransportModel.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/Switch.H
 singlePhaseTransportModel/singlePhaseTransportModel.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/instantList.H
 singlePhaseTransportModel/singlePhaseTransportModel.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/instant.H

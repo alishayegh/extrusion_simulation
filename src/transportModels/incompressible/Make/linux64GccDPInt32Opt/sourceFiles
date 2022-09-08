@@ -1,13 +1,6 @@
 SOURCE = \
 viscosityModels/viscosityModel/viscosityModel.C\
-viscosityModels/viscosityModel/newViscosityModel.C\
-viscosityModels/Newtonian/Newtonian.C\
-viscosityModels/LevyMises/LevyMises.C\
-viscosityModels/powerLaw/powerLaw.C\
-viscosityModels/CrossPowerLaw/CrossPowerLaw.C\
-viscosityModels/BirdCarreau/BirdCarreau.C\
-viscosityModels/HerschelBulkley/HerschelBulkley.C\
-viscosityModels/freeSurface/freeSurface.C\
+viscosityModels/rigidPlastic/rigidPlastic.C\
 transportModel/transportModel.C\
 singlePhaseTransportModel/singlePhaseTransportModel.C\
 incompressibleTwoPhaseMixture/twoPhaseMixture.C

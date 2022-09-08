@@ -1,7 +1,7 @@
 $(OBJECTS_DIR)/twoPhaseMixture.o: incompressibleTwoPhaseMixture/twoPhaseMixture.dep
 incompressibleTwoPhaseMixture/twoPhaseMixture.dep: incompressibleTwoPhaseMixture/twoPhaseMixture.C
 incompressibleTwoPhaseMixture/twoPhaseMixture.dep: incompressibleTwoPhaseMixture/twoPhaseMixture.H
-incompressibleTwoPhaseMixture/twoPhaseMixture.dep: ../incompressible/transportModel/transportModel.H
+incompressibleTwoPhaseMixture/twoPhaseMixture.dep: $(WM_PROJECT_DIR)/src/transportModels/incompressible/transportModel/transportModel.H
 incompressibleTwoPhaseMixture/twoPhaseMixture.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/IOdictionary.H
 incompressibleTwoPhaseMixture/twoPhaseMixture.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/dictionary.H
 incompressibleTwoPhaseMixture/twoPhaseMixture.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/entry.H
@@ -170,7 +170,7 @@ incompressibleTwoPhaseMixture/twoPhaseMixture.dep: $(WM_PROJECT_DIR)/src/foam/ln
 incompressibleTwoPhaseMixture/twoPhaseMixture.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/SymmTensor4thOrderTemplate.H
 incompressibleTwoPhaseMixture/twoPhaseMixture.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/SymmTensor4thOrderTemplateI.H
 incompressibleTwoPhaseMixture/twoPhaseMixture.dep: $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/surfaceFieldsFwd.H
-incompressibleTwoPhaseMixture/twoPhaseMixture.dep: ../incompressible/viscosityModels/viscosityModel/viscosityModel.H
+incompressibleTwoPhaseMixture/twoPhaseMixture.dep: $(WM_PROJECT_DIR)/src/transportModels/incompressible/viscosityModels/viscosityModel/viscosityModel.H
 incompressibleTwoPhaseMixture/twoPhaseMixture.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/dimensionedScalar.H
 incompressibleTwoPhaseMixture/twoPhaseMixture.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/dimensionedType.H
 incompressibleTwoPhaseMixture/twoPhaseMixture.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/dimensionSet.H

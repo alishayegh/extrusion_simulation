@@ -169,13 +169,6 @@ transportModel/transportModel.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/symmTens
 transportModel/transportModel.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/SymmTensor4thOrderTemplate.H
 transportModel/transportModel.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/SymmTensor4thOrderTemplateI.H
 transportModel/transportModel.dep: $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/surfaceFieldsFwd.H
-transportModel/transportModel.dep: lnInclude/viscosityModel.H
-transportModel/transportModel.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/dimensionedScalar.H
-transportModel/transportModel.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/dimensionedType.H
-transportModel/transportModel.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/dimensionSet.H
-transportModel/transportModel.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/dimensionedScalarFwd.H
-transportModel/transportModel.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/dimensionSets.H
-transportModel/transportModel.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/dimensionedType.C
 transportModel/transportModel.dep: $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/volFields.H
 transportModel/transportModel.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/objectRegistry.H
 transportModel/transportModel.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/wordReList.H
@@ -189,6 +182,12 @@ transportModel/transportModel.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/FIFOStac
 transportModel/transportModel.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/clock.H
 transportModel/transportModel.dep: $(WM_PROJECT_DIR)/src/OSspecific/POSIX/lnInclude/cpuTime.H
 transportModel/transportModel.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/TimeState.H
+transportModel/transportModel.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/dimensionedScalar.H
+transportModel/transportModel.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/dimensionedType.H
+transportModel/transportModel.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/dimensionSet.H
+transportModel/transportModel.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/dimensionedScalarFwd.H
+transportModel/transportModel.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/dimensionSets.H
+transportModel/transportModel.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/dimensionedType.C
 transportModel/transportModel.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/Switch.H
 transportModel/transportModel.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/instantList.H
 transportModel/transportModel.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/instant.H

@@ -1,12 +1,5 @@
 include viscosityModels/viscosityModel/viscosityModel.dep
-include viscosityModels/viscosityModel/newViscosityModel.dep
-include viscosityModels/Newtonian/Newtonian.dep
-include viscosityModels/LevyMises/LevyMises.dep
-include viscosityModels/powerLaw/powerLaw.dep
-include viscosityModels/CrossPowerLaw/CrossPowerLaw.dep
-include viscosityModels/BirdCarreau/BirdCarreau.dep
-include viscosityModels/HerschelBulkley/HerschelBulkley.dep
-include viscosityModels/freeSurface/freeSurface.dep
+include viscosityModels/rigidPlastic/rigidPlastic.dep
 include transportModel/transportModel.dep
 include singlePhaseTransportModel/singlePhaseTransportModel.dep
 include incompressibleTwoPhaseMixture/twoPhaseMixture.dep

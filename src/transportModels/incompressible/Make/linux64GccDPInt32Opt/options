@@ -53,7 +53,7 @@
 
 # 4 "<command-line>" 2
 # 1 "options"
-EXE_INC =     -I..     -I$(LIB_SRC)/finiteVolume/lnInclude
+EXE_INC =     -I$(LIB_SRC)/transportModels     -I$(LIB_SRC)/finiteVolume/lnInclude
 
 
 

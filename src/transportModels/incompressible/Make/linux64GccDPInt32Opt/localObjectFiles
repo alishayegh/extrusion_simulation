@@ -1,13 +1,6 @@
 LOCAL_OBJECTS = \
 viscosityModel.o\
-newViscosityModel.o\
-Newtonian.o\
-LevyMises.o\
-powerLaw.o\
-CrossPowerLaw.o\
-BirdCarreau.o\
-HerschelBulkley.o\
-freeSurface.o\
+rigidPlastic.o\
 transportModel.o\
 singlePhaseTransportModel.o\
 twoPhaseMixture.o
