@@ -38,6 +38,54 @@ namespace viscosityModels
 }
 }
 
+// * * * * * * * * * * * * Private Member Functions  * * * * * * * * * * * * //
+
+Foam::tmp<Foam::volScalarField>
+Foam::viscosityModels::rigidPlastic::calcNu() const
+{
+    //tmp<volScalarField> tsigma = strainRate();
+    //const volScalarField& sigma = tsigma();
+
+    //forAll(nu_, celli)
+    //{
+    //    //const double& strainRateThresholdCopy = 
+    //    //    strainRateThreshold_;
+    //    if ( sigma[celli] > strainRateThreshold_.value() )
+    //        nu_[celli] = 1./3. * yieldStress_.value() 
+    //            / (sigma[celli] * rho_.value());
+    //    else
+    //        nu_[celli] = 1./3. * yieldStress_.value() / 
+    //            (strainRateThreshold_.value() *
+    //                rho_.value());
+    //}
+    return /*max
+    (
+        VSMALL,
+        //dimensionedSc1./3. * 
+        */
+        yieldStress_ / (strainRate() * rho_);
+        //yieldStress_ / (strainRateThreshold_ * rho_);
+    //);
+
+    //return nu_;
+    //return max
+    //(
+    //    nuMin_,
+    //    min
+    //    (
+    //        nuMax_,
+    //        k_*pow
+    //        (
+    //            max
+    //            (
+    //                dimensionedScalar("one", dimTime, 1.0)*strainRate(),
+    //                dimensionedScalar("VSMALL", dimless, VSMALL)
+    //            ),
+    //            n_.value() - scalar(1.0)
+    //        )
+    //    )
+    //);
+}
 
 // * * * * * * * * * * * * * * * * Constructors  * * * * * * * * * * * * * * //
 
@@ -50,7 +98,10 @@ Foam::viscosityModels::rigidPlastic::rigidPlastic
 )
 :
     viscosityModel(name, viscosityProperties, U, phi),
-    nu0_(viscosityProperties_.lookup("nu")),
+    rigidPlasticCoeffs_(viscosityProperties.subDict(typeName + "Coeffs")),
+    rho_(rigidPlasticCoeffs_.lookup("rho_")),
+    yieldStress_(rigidPlasticCoeffs_.lookup("yieldStress_")),
+    strainRateThreshold_(rigidPlasticCoeffs_.lookup("strainRateThreshold_")),
     nu_
     (
         IOobject
@@ -59,12 +110,17 @@ Foam::viscosityModels::rigidPlastic::rigidPlastic
             U_.time().timeName(),
             U_.db(),
             IOobject::NO_READ,
-            IOobject::NO_WRITE
+            IOobject::AUTO_WRITE
         ),
-        U_.mesh(),
-        nu0_
+        //U_.mesh(),
+        calcNu()
+        //1./3. * yieldStress_.value() / 
+        //  (strainRateThreshold_.value() *
+        //    rho_.value())
     )
-{}
+{
+    correct();
+}
 
 
 // * * * * * * * * * * * * * * Member Functions  * * * * * * * * * * * * * * //
@@ -76,11 +132,42 @@ bool Foam::viscosityModels::rigidPlastic::read
 {
     viscosityModel::read(viscosityProperties);
 
-    viscosityProperties_.lookup("nu") >> nu0_;
-    nu_ = nu0_;
+    viscosityProperties_.lookup("rho") >> rho_;
+    viscosityProperties_.lookup("yieldStress") >> yieldStress_;
+    viscosityProperties_.lookup("strainRateThreshold") >> 
+      strainRateThreshold_;
 
     return true;
 }
 
+namespace Foam
+{
+namespace viscosityModels
+{
 
+//void Foam::viscosityModels::rigidPlastic::correct()
+void rigidPlastic::correct()
+{
+    tmp<volScalarField> tsigma = strainRate();
+    const volScalarField& sigma = tsigma();
+
+    forAll(rigidPlastic::nu_, celli)
+    {
+        //const double& strainRateThresholdCopy = 
+        //    strainRateThreshold_;
+        if ( sigma[celli] > rigidPlastic::strainRateThreshold_.value() )
+            rigidPlastic::nu_[celli] = 1./3. * 
+              rigidPlastic::yieldStress_.value() 
+                / (sigma[celli] * 
+                  rigidPlastic::rho_.value());
+        else
+            nu_[celli] = 1./3. * 
+              rigidPlastic::yieldStress_.value() / 
+                (rigidPlastic::strainRateThreshold_.value() *
+                  rigidPlastic::rho_.value());
+    }
+}
+
+}
+}
 // ************************************************************************* //

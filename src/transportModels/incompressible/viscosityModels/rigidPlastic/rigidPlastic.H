@@ -65,6 +65,11 @@ class rigidPlastic
         volScalarField nu_;
 
 
+    // Private Member Functions
+
+        tmp<volScalarField> calcNu() const;
+
+
 public:
 
     //- Runtime type information
@@ -98,10 +103,10 @@ public:
         }
 
         //- Correct the laminar viscosity (not appropriate, viscosity constant)
-        virtual void correct()
-        {
-            nu_.correctBoundaryConditions();
-        }
+        virtual void correct();
+        //{
+        //    nu_ = calcNu();
+        //}
 
         //- Read transportProperties dictionary
         virtual bool read(const dictionary& viscosityProperties);

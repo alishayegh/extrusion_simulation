@@ -1,0 +1,394 @@
+Making dependency list for source file viscosityModels/rigidPlastic/rigidPlastic.C
+SOURCE=viscosityModels/rigidPlastic/rigidPlastic.C ;  g++ -std=c++11 -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wno-unused-parameter -Wold-style-cast -Wnon-virtual-dtor -O3  -DNoRepository -ftemplate-depth-200 -I/home/maalek/foam/foam-extend-4.1_NR/src/transportModels     -I/home/maalek/foam/foam-extend-4.1_NR/src/finiteVolume/lnInclude -IlnInclude -I. -I/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude -I/home/maalek/foam/foam-extend-4.1_NR/src/OSspecific/POSIX/lnInclude   -fPIC -c $SOURCE -o Make/linux64GccDPInt32Opt/rigidPlastic.o
+In file included from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/SLListBase.H:266,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/SLList.H:36,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/UListIO.C:29,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/UList.C:232,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/UList.H:462,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/List.H:43,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/HashTable.C:30,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/Istream.H:187,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/token.H:473,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/UILListIO.C:30,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/UILList.C:94,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/UILList.H:286,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/ILList.H:39,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/IDLList.H:35,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/entry.H:45,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/dictionary.H:54,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/IOdictionary.H:42,
+                 from lnInclude/viscosityModel.H:45,
+                 from viscosityModels/rigidPlastic/rigidPlastic.H:38,
+                 from viscosityModels/rigidPlastic/rigidPlastic.C:26:
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/SLListBaseI.H: In member function ‘Foam::SLListBase::iterator Foam::SLListBase::iterator::operator++(int)’:
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/SLListBaseI.H:218:21: warning: implicitly-declared ‘constexpr Foam::SLListBase::iterator::iterator(const Foam::SLListBase::iterator&)’ is deprecated [-Wdeprecated-copy]
+  218 |     iterator tmp = *this;
+      |                     ^~~~
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/SLListBaseI.H:174:13: note: because ‘Foam::SLListBase::iterator’ has user-provided ‘void Foam::SLListBase::iterator::operator=(const Foam::SLListBase::iterator&)’
+  174 | inline void Foam::SLListBase::iterator::operator=(const iterator& iter)
+      |             ^~~~
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/SLListBaseI.H:220:12: warning: implicitly-declared ‘constexpr Foam::SLListBase::iterator::iterator(const Foam::SLListBase::iterator&)’ is deprecated [-Wdeprecated-copy]
+  220 |     return tmp;
+      |            ^~~
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/SLListBaseI.H:174:13: note: because ‘Foam::SLListBase::iterator’ has user-provided ‘void Foam::SLListBase::iterator::operator=(const Foam::SLListBase::iterator&)’
+  174 | inline void Foam::SLListBase::iterator::operator=(const iterator& iter)
+      |             ^~~~
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/SLListBaseI.H: In member function ‘Foam::SLListBase::iterator Foam::SLListBase::begin()’:
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/SLListBaseI.H:233:16: warning: implicitly-declared ‘constexpr Foam::SLListBase::iterator::iterator(const Foam::SLListBase::iterator&)’ is deprecated [-Wdeprecated-copy]
+  233 |         return endIter_;
+      |                ^~~~~~~~
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/SLListBaseI.H:174:13: note: because ‘Foam::SLListBase::iterator’ has user-provided ‘void Foam::SLListBase::iterator::operator=(const Foam::SLListBase::iterator&)’
+  174 | inline void Foam::SLListBase::iterator::operator=(const iterator& iter)
+      |             ^~~~
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/SLListBaseI.H: In member function ‘Foam::SLListBase::const_iterator Foam::SLListBase::const_iterator::operator++(int)’:
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/SLListBaseI.H:318:27: warning: implicitly-declared ‘constexpr Foam::SLListBase::const_iterator::const_iterator(const Foam::SLListBase::const_iterator&)’ is deprecated [-Wdeprecated-copy]
+  318 |     const_iterator tmp = *this;
+      |                           ^~~~
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/SLListBaseI.H:265:13: note: because ‘Foam::SLListBase::const_iterator’ has user-provided ‘void Foam::SLListBase::const_iterator::operator=(const Foam::SLListBase::const_iterator&)’
+  265 | inline void Foam::SLListBase::const_iterator::operator=
+      |             ^~~~
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/SLListBaseI.H:320:12: warning: implicitly-declared ‘constexpr Foam::SLListBase::const_iterator::const_iterator(const Foam::SLListBase::const_iterator&)’ is deprecated [-Wdeprecated-copy]
+  320 |     return tmp;
+      |            ^~~
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/SLListBaseI.H:265:13: note: because ‘Foam::SLListBase::const_iterator’ has user-provided ‘void Foam::SLListBase::const_iterator::operator=(const Foam::SLListBase::const_iterator&)’
+  265 | inline void Foam::SLListBase::const_iterator::operator=
+      |             ^~~~
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/SLListBaseI.H: In member function ‘Foam::SLListBase::const_iterator Foam::SLListBase::cbegin() const’:
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/SLListBaseI.H:333:16: warning: implicitly-declared ‘constexpr Foam::SLListBase::const_iterator::const_iterator(const Foam::SLListBase::const_iterator&)’ is deprecated [-Wdeprecated-copy]
+  333 |         return endConstIter_;
+      |                ^~~~~~~~~~~~~
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/SLListBaseI.H:265:13: note: because ‘Foam::SLListBase::const_iterator’ has user-provided ‘void Foam::SLListBase::const_iterator::operator=(const Foam::SLListBase::const_iterator&)’
+  265 | inline void Foam::SLListBase::const_iterator::operator=
+      |             ^~~~
+In file included from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/DLListBase.H:280,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/IDLList.H:36,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/entry.H:45,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/dictionary.H:54,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/IOdictionary.H:42,
+                 from lnInclude/viscosityModel.H:45,
+                 from viscosityModels/rigidPlastic/rigidPlastic.H:38,
+                 from viscosityModels/rigidPlastic/rigidPlastic.C:26:
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/DLListBaseI.H: In member function ‘Foam::DLListBase::iterator Foam::DLListBase::iterator::operator++(int)’:
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/DLListBaseI.H:246:21: warning: implicitly-declared ‘constexpr Foam::DLListBase::iterator::iterator(const Foam::DLListBase::iterator&)’ is deprecated [-Wdeprecated-copy]
+  246 |     iterator tmp = *this;
+      |                     ^~~~
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/DLListBaseI.H:198:13: note: because ‘Foam::DLListBase::iterator’ has user-provided ‘void Foam::DLListBase::iterator::operator=(const Foam::DLListBase::iterator&)’
+  198 | inline void Foam::DLListBase::iterator::operator=(const iterator& iter)
+      |             ^~~~
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/DLListBaseI.H:248:12: warning: implicitly-declared ‘constexpr Foam::DLListBase::iterator::iterator(const Foam::DLListBase::iterator&)’ is deprecated [-Wdeprecated-copy]
+  248 |     return tmp;
+      |            ^~~
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/DLListBaseI.H:198:13: note: because ‘Foam::DLListBase::iterator’ has user-provided ‘void Foam::DLListBase::iterator::operator=(const Foam::DLListBase::iterator&)’
+  198 | inline void Foam::DLListBase::iterator::operator=(const iterator& iter)
+      |             ^~~~
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/DLListBaseI.H: In member function ‘Foam::DLListBase::iterator Foam::DLListBase::begin()’:
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/DLListBaseI.H:261:16: warning: implicitly-declared ‘constexpr Foam::DLListBase::iterator::iterator(const Foam::DLListBase::iterator&)’ is deprecated [-Wdeprecated-copy]
+  261 |         return endIter_;
+      |                ^~~~~~~~
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/DLListBaseI.H:198:13: note: because ‘Foam::DLListBase::iterator’ has user-provided ‘void Foam::DLListBase::iterator::operator=(const Foam::DLListBase::iterator&)’
+  198 | inline void Foam::DLListBase::iterator::operator=(const iterator& iter)
+      |             ^~~~
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/DLListBaseI.H: In member function ‘Foam::DLListBase::const_iterator Foam::DLListBase::const_iterator::operator++(int)’:
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/DLListBaseI.H:345:27: warning: implicitly-declared ‘constexpr Foam::DLListBase::const_iterator::const_iterator(const Foam::DLListBase::const_iterator&)’ is deprecated [-Wdeprecated-copy]
+  345 |     const_iterator tmp = *this;
+      |                           ^~~~
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/DLListBaseI.H:292:13: note: because ‘Foam::DLListBase::const_iterator’ has user-provided ‘void Foam::DLListBase::const_iterator::operator=(const Foam::DLListBase::const_iterator&)’
+  292 | inline void Foam::DLListBase::const_iterator::operator=
+      |             ^~~~
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/DLListBaseI.H:347:12: warning: implicitly-declared ‘constexpr Foam::DLListBase::const_iterator::const_iterator(const Foam::DLListBase::const_iterator&)’ is deprecated [-Wdeprecated-copy]
+  347 |     return tmp;
+      |            ^~~
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/DLListBaseI.H:292:13: note: because ‘Foam::DLListBase::const_iterator’ has user-provided ‘void Foam::DLListBase::const_iterator::operator=(const Foam::DLListBase::const_iterator&)’
+  292 | inline void Foam::DLListBase::const_iterator::operator=
+      |             ^~~~
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/DLListBaseI.H: In member function ‘Foam::DLListBase::const_iterator Foam::DLListBase::cbegin() const’:
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/DLListBaseI.H:360:16: warning: implicitly-declared ‘constexpr Foam::DLListBase::const_iterator::const_iterator(const Foam::DLListBase::const_iterator&)’ is deprecated [-Wdeprecated-copy]
+  360 |         return endConstIter_;
+      |                ^~~~~~~~~~~~~
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/DLListBaseI.H:292:13: note: because ‘Foam::DLListBase::const_iterator’ has user-provided ‘void Foam::DLListBase::const_iterator::operator=(const Foam::DLListBase::const_iterator&)’
+  292 | inline void Foam::DLListBase::const_iterator::operator=
+      |             ^~~~
+In file included from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/regIOobject.H:41,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/IOdictionary.H:43,
+                 from lnInclude/viscosityModel.H:45,
+                 from viscosityModels/rigidPlastic/rigidPlastic.H:38,
+                 from viscosityModels/rigidPlastic/rigidPlastic.C:26:
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/IOobject.H: In member function ‘Foam::autoPtr<Foam::IOobject> Foam::IOobject::clone() const’:
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/IOobject.H:257:56: warning: implicitly-declared ‘Foam::IOobject::IOobject(const Foam::IOobject&)’ is deprecated [-Wdeprecated-copy]
+  257 |             return autoPtr<IOobject>(new IOobject(*this));
+      |                                                        ^
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/IOobject.H:450:14: note: because ‘Foam::IOobject’ has user-provided ‘void Foam::IOobject::operator=(const Foam::IOobject&)’
+  450 |         void operator=(const IOobject&);
+      |              ^~~~~~~~
+In file included from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/septernion.H:191,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/transformField.H:40,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/finiteVolume/lnInclude/fvMatrix.C:31,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/finiteVolume/lnInclude/fvMatrix.H:1080,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/finiteVolume/lnInclude/fvScalarMatrix.H:38,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/finiteVolume/lnInclude/fvMatrices.H:40,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/finiteVolume/lnInclude/fvPatchFields.H:33,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/finiteVolume/lnInclude/volFields.H:41,
+                 from viscosityModels/rigidPlastic/rigidPlastic.H:40,
+                 from viscosityModels/rigidPlastic/rigidPlastic.C:26:
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/septernionI.H: In constructor ‘Foam::septernion::septernion(const vector&, const Foam::quaternion&)’:
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/septernionI.H:34:9: warning: implicitly-declared ‘Foam::quaternion::quaternion(const Foam::quaternion&)’ is deprecated [-Wdeprecated-copy]
+   34 |     r_(r)
+      |         ^
+In file included from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/quaternion.H:222,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/transformField.H:39,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/finiteVolume/lnInclude/fvMatrix.C:31,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/finiteVolume/lnInclude/fvMatrix.H:1080,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/finiteVolume/lnInclude/fvScalarMatrix.H:38,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/finiteVolume/lnInclude/fvMatrices.H:40,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/finiteVolume/lnInclude/fvPatchFields.H:33,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/finiteVolume/lnInclude/volFields.H:41,
+                 from viscosityModels/rigidPlastic/rigidPlastic.H:40,
+                 from viscosityModels/rigidPlastic/rigidPlastic.C:26:
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/quaternionI.H:137:13: note: because ‘Foam::quaternion’ has user-provided ‘void Foam::quaternion::operator=(const Foam::quaternion&)’
+  137 | inline void Foam::quaternion::operator=(const quaternion& q)
+      |             ^~~~
+In file included from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/septernion.H:191,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/transformField.H:40,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/finiteVolume/lnInclude/fvMatrix.C:31,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/finiteVolume/lnInclude/fvMatrix.H:1080,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/finiteVolume/lnInclude/fvScalarMatrix.H:38,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/finiteVolume/lnInclude/fvMatrices.H:40,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/finiteVolume/lnInclude/fvPatchFields.H:33,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/finiteVolume/lnInclude/volFields.H:41,
+                 from viscosityModels/rigidPlastic/rigidPlastic.H:40,
+                 from viscosityModels/rigidPlastic/rigidPlastic.C:26:
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/septernionI.H: In constructor ‘Foam::septernion::septernion(const vector&)’:
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/septernionI.H:40:21: warning: implicitly-declared ‘Foam::quaternion::quaternion(const Foam::quaternion&)’ is deprecated [-Wdeprecated-copy]
+   40 |     r_(quaternion::I)
+      |                     ^
+In file included from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/quaternion.H:222,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/transformField.H:39,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/finiteVolume/lnInclude/fvMatrix.C:31,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/finiteVolume/lnInclude/fvMatrix.H:1080,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/finiteVolume/lnInclude/fvScalarMatrix.H:38,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/finiteVolume/lnInclude/fvMatrices.H:40,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/finiteVolume/lnInclude/fvPatchFields.H:33,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/finiteVolume/lnInclude/volFields.H:41,
+                 from viscosityModels/rigidPlastic/rigidPlastic.H:40,
+                 from viscosityModels/rigidPlastic/rigidPlastic.C:26:
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/quaternionI.H:137:13: note: because ‘Foam::quaternion’ has user-provided ‘void Foam::quaternion::operator=(const Foam::quaternion&)’
+  137 | inline void Foam::quaternion::operator=(const quaternion& q)
+      |             ^~~~
+In file included from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/septernion.H:191,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/transformField.H:40,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/finiteVolume/lnInclude/fvMatrix.C:31,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/finiteVolume/lnInclude/fvMatrix.H:1080,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/finiteVolume/lnInclude/fvScalarMatrix.H:38,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/finiteVolume/lnInclude/fvMatrices.H:40,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/finiteVolume/lnInclude/fvPatchFields.H:33,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/finiteVolume/lnInclude/volFields.H:41,
+                 from viscosityModels/rigidPlastic/rigidPlastic.H:40,
+                 from viscosityModels/rigidPlastic/rigidPlastic.C:26:
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/septernionI.H: In constructor ‘Foam::septernion::septernion(const Foam::quaternion&)’:
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/septernionI.H:46:9: warning: implicitly-declared ‘Foam::quaternion::quaternion(const Foam::quaternion&)’ is deprecated [-Wdeprecated-copy]
+   46 |     r_(r)
+      |         ^
+In file included from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/quaternion.H:222,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/transformField.H:39,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/finiteVolume/lnInclude/fvMatrix.C:31,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/finiteVolume/lnInclude/fvMatrix.H:1080,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/finiteVolume/lnInclude/fvScalarMatrix.H:38,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/finiteVolume/lnInclude/fvMatrices.H:40,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/finiteVolume/lnInclude/fvPatchFields.H:33,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/finiteVolume/lnInclude/volFields.H:41,
+                 from viscosityModels/rigidPlastic/rigidPlastic.H:40,
+                 from viscosityModels/rigidPlastic/rigidPlastic.C:26:
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/quaternionI.H:137:13: note: because ‘Foam::quaternion’ has user-provided ‘void Foam::quaternion::operator=(const Foam::quaternion&)’
+  137 | inline void Foam::quaternion::operator=(const quaternion& q)
+      |             ^~~~
+In file included from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/DimensionedField.H:348,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/GeometricField.H:44,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/GeometricScalarField.H:38,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/GeometricFields.H:34,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/finiteVolume/lnInclude/volFields.H:38,
+                 from viscosityModels/rigidPlastic/rigidPlastic.H:40,
+                 from viscosityModels/rigidPlastic/rigidPlastic.C:26:
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/DimensionedField.C: In instantiation of ‘Foam::DimensionedField<Type, GeoMesh>::DimensionedField(const Foam::IOobject&, const Foam::DimensionedField<Type, GeoMesh>&) [with Type = double; GeoMesh = Foam::volMesh]’:
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/GeometricField.C:532:44:   required from ‘Foam::GeometricField<Type, PatchField, GeoMesh>::GeometricField(const Foam::IOobject&, const Foam::GeometricField<Type, PatchField, GeoMesh>&) [with Type = double; PatchField = Foam::fvPatchField; GeoMesh = Foam::volMesh]’
+viscosityModels/rigidPlastic/rigidPlastic.C:120:5:   required from here
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/DimensionedField.C:184:31: warning: implicitly-declared ‘constexpr Foam::dimensionSet::dimensionSet(const Foam::dimensionSet&)’ is deprecated [-Wdeprecated-copy]
+  184 |     dimensions_(df.dimensions_)
+      |                               ^
+In file included from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/dimensionedType.H:40,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/dimensionedScalar.H:38,
+                 from lnInclude/viscosityModel.H:50,
+                 from viscosityModels/rigidPlastic/rigidPlastic.H:38,
+                 from viscosityModels/rigidPlastic/rigidPlastic.C:26:
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/dimensionSet.H:197:14: note: because ‘Foam::dimensionSet’ has user-provided ‘bool Foam::dimensionSet::operator=(const Foam::dimensionSet&) const’
+  197 |         bool operator=(const dimensionSet&) const;
+      |              ^~~~~~~~
+In file included from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/SLList.H:35,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/UListIO.C:29,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/UList.C:232,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/UList.H:462,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/List.H:43,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/HashTable.C:30,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/Istream.H:187,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/token.H:473,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/UILListIO.C:30,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/UILList.C:94,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/UILList.H:286,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/ILList.H:39,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/IDLList.H:35,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/entry.H:45,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/dictionary.H:54,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/IOdictionary.H:42,
+                 from lnInclude/viscosityModel.H:45,
+                 from viscosityModels/rigidPlastic/rigidPlastic.H:38,
+                 from viscosityModels/rigidPlastic/rigidPlastic.C:26:
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/LList.H: In instantiation of ‘Foam::LList<LListBase, T>::const_iterator::const_iterator(Foam::LList<LListBase, T>::LListBase_const_iterator) [with LListBase = Foam::SLListBase; T = int; Foam::LList<LListBase, T>::LListBase_const_iterator = Foam::SLListBase::const_iterator]’:
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/List.C:429:48:   required from ‘void Foam::List<T>::operator=(const Foam::SLList<T>&) [with T = int]’
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/ListIO.C:156:14:   required from ‘Foam::Istream& Foam::operator>>(Foam::Istream&, Foam::List<T>&) [with T = int]’
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/faceI.H:162:40:   required from here
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/LList.H:286:50: warning: implicitly-declared ‘constexpr Foam::SLListBase::const_iterator::const_iterator(const Foam::SLListBase::const_iterator&)’ is deprecated [-Wdeprecated-copy]
+  286 |                 LListBase_const_iterator(baseIter)
+      |                                                  ^
+In file included from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/SLListBase.H:266,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/SLList.H:36,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/UListIO.C:29,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/UList.C:232,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/UList.H:462,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/List.H:43,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/HashTable.C:30,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/Istream.H:187,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/token.H:473,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/UILListIO.C:30,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/UILList.C:94,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/UILList.H:286,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/ILList.H:39,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/IDLList.H:35,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/entry.H:45,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/dictionary.H:54,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/IOdictionary.H:42,
+                 from lnInclude/viscosityModel.H:45,
+                 from viscosityModels/rigidPlastic/rigidPlastic.H:38,
+                 from viscosityModels/rigidPlastic/rigidPlastic.C:26:
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/SLListBaseI.H:265:13: note: because ‘Foam::SLListBase::const_iterator’ has user-provided ‘void Foam::SLListBase::const_iterator::operator=(const Foam::SLListBase::const_iterator&)’
+  265 | inline void Foam::SLListBase::const_iterator::operator=
+      |             ^~~~
+In file included from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/DimensionedField.H:348,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/GeometricField.H:44,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/GeometricScalarField.H:38,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/GeometricFields.H:34,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/finiteVolume/lnInclude/volFields.H:38,
+                 from viscosityModels/rigidPlastic/rigidPlastic.H:40,
+                 from viscosityModels/rigidPlastic/rigidPlastic.C:26:
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/DimensionedField.C: In instantiation of ‘Foam::DimensionedField<Type, GeoMesh>::DimensionedField(const Foam::word&, const Foam::DimensionedField<Type, GeoMesh>&) [with Type = double; GeoMesh = Foam::volMesh]’:
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/GeometricField.C:564:44:   required from ‘Foam::GeometricField<Type, PatchField, GeoMesh>::GeometricField(const Foam::word&, const Foam::GeometricField<Type, PatchField, GeoMesh>&) [with Type = double; PatchField = Foam::fvPatchField; GeoMesh = Foam::volMesh]’
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/GeometricField.C:543:22:   required from ‘Foam::GeometricField<Type, PatchField, GeoMesh>::GeometricField(const Foam::IOobject&, const Foam::GeometricField<Type, PatchField, GeoMesh>&) [with Type = double; PatchField = Foam::fvPatchField; GeoMesh = Foam::volMesh]’
+viscosityModels/rigidPlastic/rigidPlastic.C:120:5:   required from here
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/DimensionedField.C:198:31: warning: implicitly-declared ‘constexpr Foam::dimensionSet::dimensionSet(const Foam::dimensionSet&)’ is deprecated [-Wdeprecated-copy]
+  198 |     dimensions_(df.dimensions_)
+      |                               ^
+In file included from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/dimensionedType.H:40,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/dimensionedScalar.H:38,
+                 from lnInclude/viscosityModel.H:50,
+                 from viscosityModels/rigidPlastic/rigidPlastic.H:38,
+                 from viscosityModels/rigidPlastic/rigidPlastic.C:26:
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/dimensionSet.H:197:14: note: because ‘Foam::dimensionSet’ has user-provided ‘bool Foam::dimensionSet::operator=(const Foam::dimensionSet&) const’
+  197 |         bool operator=(const dimensionSet&) const;
+      |              ^~~~~~~~
+In file included from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/DimensionedField.H:348,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/GeometricField.H:44,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/GeometricScalarField.H:38,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/GeometricFields.H:34,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/finiteVolume/lnInclude/volFields.H:38,
+                 from viscosityModels/rigidPlastic/rigidPlastic.H:40,
+                 from viscosityModels/rigidPlastic/rigidPlastic.C:26:
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/DimensionedField.C: In instantiation of ‘Foam::DimensionedField<Type, GeoMesh>::DimensionedField(const Foam::IOobject&, const Mesh&, const Foam::dimensionSet&) [with Type = double; GeoMesh = Foam::volMesh; Foam::DimensionedField<Type, GeoMesh>::Mesh = Foam::fvMesh]’:
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/GeometricField.C:211:58:   required from ‘Foam::GeometricField<Type, PatchField, GeoMesh>::GeometricField(const Foam::IOobject&, const Mesh&, const Foam::dimensionSet&, const Foam::word&) [with Type = double; PatchField = Foam::fvPatchField; GeoMesh = Foam::volMesh; Foam::GeometricField<Type, PatchField, GeoMesh>::Mesh = Foam::fvMesh]’
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/GeometricFieldReuseFunctions.H:107:17:   required from ‘static Foam::tmp<Foam::GeometricField<Type, PatchField, GeoMesh> > Foam::reuseTmpGeometricField<TypeR, TypeR, PatchField, GeoMesh>::New(const Foam::tmp<Foam::GeometricField<Type, PatchField, GeoMesh> >&, const Foam::word&, const Foam::dimensionSet&) [with TypeR = double; PatchField = Foam::fvPatchField; GeoMesh = Foam::volMesh]’
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/GeometricFieldFunctions.C:567:1:   required from ‘Foam::tmp<Foam::GeometricField<Type, PatchField, GeoMesh> > Foam::operator*(const Foam::tmp<Foam::GeometricField<Type, PatchField, GeoMesh> >&, const Foam::dimensioned<double>&) [with Type = double; PatchField = Foam::fvPatchField; GeoMesh = Foam::volMesh]’
+viscosityModels/rigidPlastic/rigidPlastic.C:66:40:   required from here
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/DimensionedField.C:90:21: warning: implicitly-declared ‘constexpr Foam::dimensionSet::dimensionSet(const Foam::dimensionSet&)’ is deprecated [-Wdeprecated-copy]
+   90 |     dimensions_(dims)
+      |                     ^
+In file included from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/dimensionedType.H:40,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/dimensionedScalar.H:38,
+                 from lnInclude/viscosityModel.H:50,
+                 from viscosityModels/rigidPlastic/rigidPlastic.H:38,
+                 from viscosityModels/rigidPlastic/rigidPlastic.C:26:
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/dimensionSet.H:197:14: note: because ‘Foam::dimensionSet’ has user-provided ‘bool Foam::dimensionSet::operator=(const Foam::dimensionSet&) const’
+  197 |         bool operator=(const dimensionSet&) const;
+      |              ^~~~~~~~
+In file included from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/SLList.H:35,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/UListIO.C:29,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/UList.C:232,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/UList.H:462,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/List.H:43,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/HashTable.C:30,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/Istream.H:187,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/token.H:473,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/UILListIO.C:30,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/UILList.C:94,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/UILList.H:286,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/ILList.H:39,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/IDLList.H:35,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/entry.H:45,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/dictionary.H:54,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/IOdictionary.H:42,
+                 from lnInclude/viscosityModel.H:45,
+                 from viscosityModels/rigidPlastic/rigidPlastic.H:38,
+                 from viscosityModels/rigidPlastic/rigidPlastic.C:26:
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/LList.H: In instantiation of ‘Foam::LList<LListBase, T>::const_iterator::const_iterator(Foam::LList<LListBase, T>::LListBase_const_iterator) [with LListBase = Foam::SLListBase; T = double; Foam::LList<LListBase, T>::LListBase_const_iterator = Foam::SLListBase::const_iterator]’:
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/List.C:429:48:   required from ‘void Foam::List<T>::operator=(const Foam::SLList<T>&) [with T = double]’
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/ListIO.C:156:14:   required from ‘Foam::Istream& Foam::operator>>(Foam::Istream&, Foam::List<T>&) [with T = double]’
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/ListIO.C:39:15:   required from ‘Foam::List<T>::List(Foam::Istream&) [with T = double]’
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/Field.C:203:18:   required from ‘Foam::Field<Type>::Field(Foam::Istream&) [with Type = double]’
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/scalarCoeffField.H:100:27:   required from here
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/LList.H:286:50: warning: implicitly-declared ‘constexpr Foam::SLListBase::const_iterator::const_iterator(const Foam::SLListBase::const_iterator&)’ is deprecated [-Wdeprecated-copy]
+  286 |                 LListBase_const_iterator(baseIter)
+      |                                                  ^
+In file included from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/SLListBase.H:266,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/SLList.H:36,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/UListIO.C:29,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/UList.C:232,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/UList.H:462,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/List.H:43,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/HashTable.C:30,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/Istream.H:187,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/token.H:473,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/UILListIO.C:30,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/UILList.C:94,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/UILList.H:286,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/ILList.H:39,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/IDLList.H:35,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/entry.H:45,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/dictionary.H:54,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/IOdictionary.H:42,
+                 from lnInclude/viscosityModel.H:45,
+                 from viscosityModels/rigidPlastic/rigidPlastic.H:38,
+                 from viscosityModels/rigidPlastic/rigidPlastic.C:26:
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/SLListBaseI.H:265:13: note: because ‘Foam::SLListBase::const_iterator’ has user-provided ‘void Foam::SLListBase::const_iterator::operator=(const Foam::SLListBase::const_iterator&)’
+  265 | inline void Foam::SLListBase::const_iterator::operator=
+      |             ^~~~
+In file included from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/DimensionedField.H:348,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/GeometricField.H:44,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/GeometricScalarField.H:38,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/GeometricFields.H:34,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/finiteVolume/lnInclude/volFields.H:38,
+                 from viscosityModels/rigidPlastic/rigidPlastic.H:40,
+                 from viscosityModels/rigidPlastic/rigidPlastic.C:26:
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/DimensionedField.C: In instantiation of ‘Foam::DimensionedField<Type, GeoMesh>::DimensionedField(const Foam::DimensionedField<Type, GeoMesh>&) [with Type = double; GeoMesh = Foam::volMesh]’:
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/GeometricField.C:468:44:   required from ‘Foam::GeometricField<Type, PatchField, GeoMesh>::GeometricField(const Foam::GeometricField<Type, PatchField, GeoMesh>&) [with Type = double; PatchField = Foam::fvPatchField; GeoMesh = Foam::volMesh]’
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/tmpI.H:168:16:   required from ‘T* Foam::tmp<T>::ptr() const [with T = Foam::GeometricField<double, Foam::fvPatchField, Foam::volMesh>]’
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/GeometricFieldReuseFunctions.H:129:13:   required from ‘static void Foam::reuseTmpGeometricField<TypeR, TypeR, PatchField, GeoMesh>::clear(const Foam::tmp<Foam::GeometricField<Type, PatchField, GeoMesh> >&) [with TypeR = double; PatchField = Foam::fvPatchField; GeoMesh = Foam::volMesh]’
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/GeometricFieldFunctions.C:567:1:   required from ‘Foam::tmp<Foam::GeometricField<Type, PatchField, GeoMesh> > Foam::operator*(const Foam::tmp<Foam::GeometricField<Type, PatchField, GeoMesh> >&, const Foam::dimensioned<double>&) [with Type = double; PatchField = Foam::fvPatchField; GeoMesh = Foam::volMesh]’
+viscosityModels/rigidPlastic/rigidPlastic.C:66:40:   required from here
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/DimensionedField.C:122:31: warning: implicitly-declared ‘constexpr Foam::dimensionSet::dimensionSet(const Foam::dimensionSet&)’ is deprecated [-Wdeprecated-copy]
+  122 |     dimensions_(df.dimensions_)
+      |                               ^
+In file included from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/dimensionedType.H:40,
+                 from /home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/dimensionedScalar.H:38,
+                 from lnInclude/viscosityModel.H:50,
+                 from viscosityModels/rigidPlastic/rigidPlastic.H:38,
+                 from viscosityModels/rigidPlastic/rigidPlastic.C:26:
+/home/maalek/foam/foam-extend-4.1_NR/src/foam/lnInclude/dimensionSet.H:197:14: note: because ‘Foam::dimensionSet’ has user-provided ‘bool Foam::dimensionSet::operator=(const Foam::dimensionSet&) const’
+  197 |         bool operator=(const dimensionSet&) const;
+      |              ^~~~~~~~
+'/home/maalek/foam/maalek-4.1_NR/lib/linux64GccDPInt32Opt/libMyincompressibleTransportModels.so' is up to date.
