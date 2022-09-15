@@ -26,6 +26,7 @@ License
 #include "rigidPlastic.H"
 #include "addToRunTimeSelectionTable.H"
 #include "surfaceFields.H"
+#include "fvcGrad.H"
 
 // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
 
@@ -42,8 +43,37 @@ namespace viscosityModels
 
 Foam::tmp<Foam::volScalarField>
 Foam::viscosityModels::rigidPlastic::calcNu() const
+/*
 {
-    //tmp<volScalarField> tsigma = strainRate();
+    volVectorField tU
+    (
+        //IOobject
+        //(
+        //    "tU",
+        //    U_.time().timeName(),
+        //    U_.db(),
+        //    IOobject::NO_READ,
+        //    IOobject::NO_WRITE
+        //),
+        //dimensionedVector
+        //(
+            "tU", dimLength/dimTime, vector::one
+        //)
+        //U_.mesh()
+        //calcNu()
+        //dimensionedScalar("tnu", dimLength/pow(dimTime,2),
+        //  1.0)
+        //1./3. * yieldStress_.value() / 
+        //  (strainRateThreshold_.value() *
+        //    rho_.value())
+    );
+    tmp<volScalarField> tsigma = 
+        sqrt(2.0)*mag(symm(fvc::grad(
+                                        tu
+                                    )
+                            )
+                        );
+    //strainRateThreshold_;// strainRate();
     //const volScalarField& sigma = tsigma();
 
     //forAll(nu_, celli)
@@ -58,12 +88,23 @@ Foam::viscosityModels::rigidPlastic::calcNu() const
     //            (strainRateThreshold_.value() *
     //                rho_.value());
     //}
-    return /*max
-    (
-        VSMALL,
-        //dimensionedSc1./3. * 
-        */
-        yieldStress_ / (strainRate() * rho_);
+    return //max
+    //(
+    //    VSMALL,
+    //    //dimensionedSc1./3. * 
+    //    
+        yieldStress_ / (max(
+                        //strainRate(),
+        				strainRateThreshold_,
+                        tsigma
+                        //dimensionedScalar("strainRateThreshold",
+                        //                  dimless/dimTime,
+                        //                  strainRateThreshold_)
+                        //dimensionedScalar("VSMALL",
+                        //                  dimless/dimTime,
+                        //                  VSMALL)
+                            ) * rho_
+                        );
         //yieldStress_ / (strainRateThreshold_ * rho_);
     //);
 
@@ -85,7 +126,8 @@ Foam::viscosityModels::rigidPlastic::calcNu() const
     //        )
     //    )
     //);
-}
+}*/
+{}
 
 // * * * * * * * * * * * * * * * * Constructors  * * * * * * * * * * * * * * //
 
@@ -99,9 +141,9 @@ Foam::viscosityModels::rigidPlastic::rigidPlastic
 :
     viscosityModel(name, viscosityProperties, U, phi),
     rigidPlasticCoeffs_(viscosityProperties.subDict(typeName + "Coeffs")),
-    rho_(rigidPlasticCoeffs_.lookup("rho_")),
-    yieldStress_(rigidPlasticCoeffs_.lookup("yieldStress_")),
-    strainRateThreshold_(rigidPlasticCoeffs_.lookup("strainRateThreshold_")),
+    rho_(rigidPlasticCoeffs_.lookup("rho")),
+    yieldStress_(rigidPlasticCoeffs_.lookup("yieldStress")),
+    strainRateThreshold_(rigidPlasticCoeffs_.lookup("strainRateThreshold")),
     nu_
     (
         IOobject
@@ -112,8 +154,10 @@ Foam::viscosityModels::rigidPlastic::rigidPlastic
             IOobject::NO_READ,
             IOobject::AUTO_WRITE
         ),
-        //U_.mesh(),
-        calcNu()
+        U_.mesh(),
+        //calcNu()
+        dimensionedScalar("tnu", dimLength/pow(dimTime,2),
+          1.0)
         //1./3. * yieldStress_.value() / 
         //  (strainRateThreshold_.value() *
         //    rho_.value())
@@ -140,34 +184,49 @@ bool Foam::viscosityModels::rigidPlastic::read
     return true;
 }
 
-namespace Foam
-{
-namespace viscosityModels
-{
+//namespace Foam
+//{
+//namespace viscosityModels
+//{
 
-//void Foam::viscosityModels::rigidPlastic::correct()
-void rigidPlastic::correct()
+void Foam::viscosityModels::rigidPlastic::correct()
+//void rigidPlastic::correct()
 {
     tmp<volScalarField> tsigma = strainRate();
     const volScalarField& sigma = tsigma();
 
-    forAll(rigidPlastic::nu_, celli)
+    //forAll(rigidPlastic::nu_, celli)
+    //{
+    //    //const double& strainRateThresholdCopy = 
+    //    //    strainRateThreshold_;
+    //    if ( sigma[celli] > rigidPlastic::strainRateThreshold_.value() )
+    //        rigidPlastic::nu_[celli] = 1./3. * 
+    //          rigidPlastic::yieldStress_.value() 
+    //            / (sigma[celli] * 
+    //              rigidPlastic::rho_.value());
+    //    else
+    //        nu_[celli] = 1./3. * 
+    //          rigidPlastic::yieldStress_.value() / 
+    //            (rigidPlastic::strainRateThreshold_.value() *
+    //              rigidPlastic::rho_.value());
+    //}
+    forAll(nu_, celli)
     {
         //const double& strainRateThresholdCopy = 
         //    strainRateThreshold_;
-        if ( sigma[celli] > rigidPlastic::strainRateThreshold_.value() )
-            rigidPlastic::nu_[celli] = 1./3. * 
-              rigidPlastic::yieldStress_.value() 
+        if ( sigma[celli] > strainRateThreshold_.value() )
+            nu_[celli] = 1./3. * 
+              yieldStress_.value() 
                 / (sigma[celli] * 
-                  rigidPlastic::rho_.value());
+                  rho_.value());
         else
             nu_[celli] = 1./3. * 
-              rigidPlastic::yieldStress_.value() / 
-                (rigidPlastic::strainRateThreshold_.value() *
-                  rigidPlastic::rho_.value());
+              yieldStress_.value() / 
+                (strainRateThreshold_.value() *
+                  rho_.value());
     }
 }
 
-}
-}
+//}
+//}
 // ************************************************************************* //
